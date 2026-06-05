@@ -1,0 +1,9 @@
+streamlit
+pandas
+scikit-learn
+passlib
+python-dotenv
+streamlit-option-menu
+groq
+PyMuPDF
+pdfplumber
