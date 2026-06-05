@@ -138,14 +138,14 @@ Schema:
 
 def _diff_badge(difficulty: str) -> str:
     colors = {
-        "Easy":   ("#EAF3DE", "#27500A"),
-        "Medium": ("#FAEEDA", "#633806"),
-        "Hard":   ("#FCEBEB", "#501313"),
+        "Easy":   ("rgba(46, 204, 113, 0.15)", "#2ecc71"),
+        "Medium": ("rgba(243, 156, 18, 0.15)", "#f39c12"),
+        "Hard":   ("rgba(231, 76, 60, 0.15)", "#e74c3c"),
     }
-    bg, fg = colors.get(difficulty, ("#F1EFE8", "#444441"))
+    bg, fg = colors.get(difficulty, ("rgba(255, 255, 255, 0.1)", "#ffffff"))
     return (
-        f'<span style="background:{bg};color:{fg};font-size:11px;'
-        f'padding:2px 8px;border-radius:99px;margin-left:6px">{difficulty}</span>'
+        f'<span style="background:{bg} !important;color:{fg} !important;font-size:11px;'
+        f'padding:2px 8px;border-radius:99px;margin-left:6px;border:1px solid {fg}40">{difficulty}</span>'
     )
 
 
